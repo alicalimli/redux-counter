@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { uid } from "@reduxjs/toolkit";
+import { nanoid } from "@reduxjs/toolkit";
 
 import { addPost } from "./postsSlice";
 
@@ -16,7 +16,7 @@ const AddPostForm = () => {
   const handleAddPost = (e) => {
     e.preventDefault();
     if (title && content) {
-      dispatch(addPost({ id: uid, title, content }));
+      dispatch(addPost({ id: nanoid, title, content }));
 
       setTitle("");
       setContent("");
@@ -28,7 +28,13 @@ const AddPostForm = () => {
       <h2>Add a New Post</h2>
       <form onSubmit={handleAddPost}>
         <label htmlFor="postTitle">Post Title:</label>
-        <input type="text" id="postTitle" name="postTitle" value={title} />
+        <input
+          type="text"
+          id="postTitle"
+          name="postTitle"
+          value={title}
+          onChange={onTitleChanged}
+        />
         <label htmlFor="postContent">Content:</label>
         <textarea
           id="postContent"
