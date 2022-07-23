@@ -5,6 +5,8 @@ const initialState = [
     id: 1,
     title: "blahblahblah",
     content: "asfsdf",
+  },
+  {
     id: 2,
     title: "blahblahblah",
     content: "asfsdf",
