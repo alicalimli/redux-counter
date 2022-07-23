@@ -16,7 +16,7 @@ const AddPostForm = () => {
   const handleAddPost = (e) => {
     e.preventDefault();
     if (title && content) {
-      dispatch(addPost({ id: nanoid, title, content }));
+      dispatch(addPost(title, content));
 
       setTitle("");
       setContent("");
