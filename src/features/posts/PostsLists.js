@@ -11,7 +11,6 @@ const PostsLists = () => {
   const posts = useSelector(selectPosts);
 
   const orderedPosts = posts.slice().sort((a, b) => {
-    console.log(a, b);
     return b.date.localeCompare(a.date);
   });
 

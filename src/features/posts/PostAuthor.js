@@ -6,8 +6,6 @@ import React from "react";
 const PostAuthor = ({ userId }) => {
   const users = useSelector(selectUsers);
   const author = users.find((user) => user.id === userId);
-  console.log(userId);
-
   return <span>by {author ? author.name : "Unknown Author"}</span>;
 };
 
