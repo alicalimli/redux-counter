@@ -6,13 +6,13 @@ const initialState = [
     id: 1,
     title: "blahblahblah",
     content: "asfsdf",
-    dat: sub(new Date(), { minutes: 10 }).toISOString(),
+    date: sub(new Date(), { minutes: 10 }).toISOString(),
   },
   {
     id: 2,
     title: "blahblahblah",
     content: "asfsdf",
-    dat: sub(new Date(), { minutes: 20 }).toISOString(),
+    date: sub(new Date(), { minutes: 20 }).toISOString(),
   },
 ];
 
