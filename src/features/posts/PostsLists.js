@@ -5,6 +5,7 @@ import { selectPosts } from "./postsSlice";
 
 import PostAuthor from "./PostAuthor";
 import PostDate from "./PostDate";
+import ReactionButtons from "./ReactionButtons";
 
 const PostsLists = () => {
   const posts = useSelector(selectPosts);
@@ -25,6 +26,7 @@ const PostsLists = () => {
         <PostAuthor userId={post.userId} />
         <PostDate timestamp={post.date} />
       </p>
+      <ReactionButtons post={post} />
     </article>
   ));
 
