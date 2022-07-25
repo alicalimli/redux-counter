@@ -45,13 +45,13 @@ const postsSlice = createSlice({
             content,
             userId,
             date: new Date().toISOString(),
-          },
-          reactions: {
-            thumbsUp: 0,
-            wow: 0,
-            heart: 0,
-            rocket: 0,
-            coffee: 0,
+            reactions: {
+              thumbsUp: 0,
+              wow: 0,
+              heart: 0,
+              rocket: 0,
+              coffee: 0,
+            },
           },
         };
       },

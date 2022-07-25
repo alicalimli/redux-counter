@@ -25,7 +25,6 @@ const AddPostForm = () => {
     e.preventDefault();
     if (title && content) {
       dispatch(addPost(title, content, userId));
-
       setTitle("");
       setContent("");
     }
