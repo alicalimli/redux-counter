@@ -36,7 +36,7 @@ const AddPostForm = () => {
       <h2>Add a New Post</h2>
       <form onSubmit={handleAddPost}>
         <label htmlFor="author-name">Author</label>
-        <select required>
+        <select required onChange={onAuthorChanged}>
           <option value=""></option>
           {authorOptions}
         </select>
