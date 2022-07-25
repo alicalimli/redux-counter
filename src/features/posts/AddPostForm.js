@@ -13,7 +13,7 @@ const AddPostForm = () => {
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
-  const onAuthorChanged = (e) => setContent(e.target.value);
+  const onAuthorChanged = (e) => setUserId(e.target.value);
 
   const authorOptions = users.map((user) => (
     <option key={user.name + user.id} value={user.id}>
@@ -24,7 +24,7 @@ const AddPostForm = () => {
   const handleAddPost = (e) => {
     e.preventDefault();
     if (title && content) {
-      dispatch(addPost(title, content));
+      dispatch(addPost(title, content, userId));
 
       setTitle("");
       setContent("");
