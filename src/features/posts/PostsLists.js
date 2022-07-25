@@ -9,12 +9,18 @@ import PostDate from "./PostDate";
 const PostsLists = () => {
   const posts = useSelector(selectPosts);
 
-  console.log(posts);
+  const orderedPosts = posts.slice().sort((a, b) => {
+    console.log(a, b);
+    return b.date.localeCompare(a.date);
+  });
 
-  const renderedPosts = posts.map((post) => (
+  const renderedPosts = orderedPosts.map((post) => (
     <article key={post.id}>
       <h3>{post.title}</h3>
-      <p>{post.content.substring(0, 100)}</p>
+      <p className="post-content">
+        {post.content.substring(0, 100)}
+        {post.content.length === 100 && "............."}
+      </p>
       <p className="postCredit">
         <PostAuthor userId={post.userId} />
         <PostDate timestamp={post.date} />
